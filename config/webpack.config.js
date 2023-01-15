@@ -25,6 +25,7 @@ const ForkTsCheckerWebpackPlugin =
     ? require('react-dev-utils/ForkTsCheckerWarningWebpackPlugin')
     : require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
 
@@ -747,6 +748,13 @@ module.exports = function (webpackEnv) {
             },
           },
         }),
+      // new CompressionPlugin({
+      //   asset: "[path].gz[query]",
+      //   algorithm: "gzip",
+      //   threshold: 10240,
+      //   minRatio: 0.8
+      // }),
+
     ].filter(Boolean),
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter

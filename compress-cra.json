@@ -1,0 +1,11 @@
+{
+    "filetypes": [
+        ".js",
+        ".css"
+    ],
+    "directory": "/build",
+    "algorithms": [
+        "gz"
+    ],
+    "retainUncompressedFiles": false
+}
